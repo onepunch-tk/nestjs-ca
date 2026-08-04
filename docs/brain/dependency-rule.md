@@ -24,11 +24,16 @@ first-seen: 2026-08-04
 
 - 2026-08-04 · shared Entity 리뷰 · "infrastructure(low level)에 Entity를 뒀다"는 이해를 교정받음.
   배치(`src/shared/domain/`)는 맞았고 용어만 뒤집혀 있었음
+- 2026-08-04 · Redis 캐싱 배치 설계 · 이 규칙을 실제로 적용해야 하는 첫 상황. 해법은
+  [[dependency-inversion-principle]]
 
 ## 인출 기록
 
-- (없음)
+- 2026-08-04 · "안쪽이 바깥을 import 않고 쓰려면 뭘 끼우나" 스케치 질문 · **부분 성공** —
+  "도메인에 redis를 부르면 안 된다"·handler=application·redis=infrastructure까지 스스로 도달.
+  마지막 한 칸(handler가 infrastructure를 import하면 화살표가 바깥을 향한다)에서 틀림
 
 ## 관련 개념
 
 - [[entity-vs-value-object]] — 이 규칙이 지키려는 가장 안쪽 원의 내용물
+- [[dependency-inversion-principle]] — 이 규칙을 "지킬 수 있게" 만드는 실행 도구
