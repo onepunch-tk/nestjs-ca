@@ -19,9 +19,7 @@ export class Sku {
     }
 
     if (!Sku.SKU_PATTERN.test(trimmed)) {
-      throw new Error(
-        `SKU must be contain only alphanumric characters and dashes`,
-      );
+      throw new Error(`SKU must contain only alphanumeric characters`);
     }
 
     return new Sku(trimmed);
