@@ -1,5 +1,5 @@
 export class Money {
-  constructor(
+  private constructor(
     private readonly amount: number,
     private readonly currency: string,
   ) {}
