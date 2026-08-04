@@ -5,15 +5,11 @@ import { Pool } from 'pg';
 export const DRIZZLE = Symbol('DRIZZLE');
 
 export type DrizzleDB = NodePgDatabase<{}>;
-export type DrizzleClient = {
-  db: DrizzleDB;
-  close(): Promise<void>;
-};
 
 export const DrizzleProvider = {
   provide: DRIZZLE,
   inject: [ConfigService],
-  useFactory: async (configService: ConfigService): Promise<DrizzleClient> => {
+  useFactory: async (configService: ConfigService): Promise<DrizzleDB> => {
     const pool = new Pool({
       connectionString: configService.getOrThrow<string>(
         'POSTGRES_DATABASE_URL',
@@ -23,9 +19,6 @@ export const DrizzleProvider = {
     const db = drizzle(pool, {});
     await db.execute(`SELECT 1`);
 
-    return {
-      db,
-      close: () => pool.end(),
-    };
+    return db;
   },
 };

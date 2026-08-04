@@ -1,9 +1,6 @@
 import { Global, Inject, Module, OnApplicationShutdown } from '@nestjs/common';
-import {
-  DRIZZLE,
-  type DrizzleClient,
-  DrizzleProvider,
-} from './drizzle.provider';
+import { Pool } from 'pg';
+import { DRIZZLE, type DrizzleDB, DrizzleProvider } from './drizzle.provider';
 
 @Global()
 @Module({
@@ -11,9 +8,11 @@ import {
   exports: [DrizzleProvider],
 })
 export class DrizzleModule implements OnApplicationShutdown {
-  constructor(@Inject(DRIZZLE) private readonly client: DrizzleClient) {}
+  constructor(
+    @Inject(DRIZZLE) private readonly db: DrizzleDB & { $client: Pool },
+  ) {}
 
   async onApplicationShutdown() {
-    await this.client.close();
+    await this.db.$client.end();
   }
 }
