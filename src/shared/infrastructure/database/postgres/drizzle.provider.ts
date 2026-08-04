@@ -13,15 +13,18 @@ export type DrizzleClient = {
 export const DrizzleProvider = {
   provide: DRIZZLE,
   inject: [ConfigService],
-  useFactory: (configService: ConfigService): DrizzleClient => {
+  useFactory: async (configService: ConfigService): Promise<DrizzleClient> => {
     const pool = new Pool({
       connectionString: configService.getOrThrow<string>(
         'POSTGRES_DATABASE_URL',
       ),
     });
 
+    const db = drizzle(pool, {});
+    await db.execute(`SELECT 1`);
+
     return {
-      db: drizzle(pool, {}),
+      db,
       close: () => pool.end(),
     };
   },
