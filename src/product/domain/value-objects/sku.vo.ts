@@ -1,5 +1,5 @@
 export class Sku {
-  private static readonly SKU_PATTERN = /^[A-Za-z0-9]+$/;
+  private static readonly SKU_PATTERN = /^[A-Za-z0-9-]+$/;
   private static readonly MIN_LENGTH = 3;
   private static MAX_LENGTH = 50;
 
@@ -19,7 +19,9 @@ export class Sku {
     }
 
     if (!Sku.SKU_PATTERN.test(trimmed)) {
-      throw new Error(`SKU must contain only alphanumeric characters`);
+      throw new Error(
+        `SKU must contain only alphanumric characters and dashes`,
+      );
     }
 
     return new Sku(trimmed);
