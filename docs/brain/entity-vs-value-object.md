@@ -27,6 +27,8 @@ Entity는 식별자로 같음을 판단하고, Value Object는 값 전체로 같
 ## 등장 이력
 
 - 2026-08-04 · shared `Entity`/`UniqueId` 코드 리뷰 · 직접 구현한 코드로 설명받음(코드 수정은 미적용)
+- 2026-08-05 · Product 생성 파이프라인 · `Product`(Entity)가 `Money`/`Sku`(VO)를 조립하는 실제 흐름을
+  확인. 인프라 경계에서 `Money 129.99 ↔ price_amount 12999`로 번역되는 지점이 어댑터라는 것도 함께
 
 ## 인출 기록
 

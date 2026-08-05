@@ -1,5 +1,5 @@
 ---
-status: 설명만 들음
+status: 직접 다뤄봄
 first-seen: 2026-08-04
 ---
 
@@ -25,6 +25,9 @@ VO는 생성자에서 검증해서, 유효하지 않은 인스턴스가 애초�
 ## 등장 이력
 
 - 2026-08-04 · shared `UniqueId` 리뷰 · 현재 코드에 검증이 없다는 지적을 받음(수정은 미적용)
+- 2026-08-05 · `Sku.SKU_PATTERN`에 하이픈 허용을 직접 추가 + `Product.create`가 원시값을 받아
+  내부에서 `Money.create`/`Sku.create`를 호출하도록 변경 · VO 생성 지점을 팩토리 한 곳으로 모은 셈.
+  대가는 `(price: number, currency: string)`이 나란히 서서 순서 실수를 컴파일러가 못 잡는 것
 
 ## 인출 기록
 

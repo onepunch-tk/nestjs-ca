@@ -1,5 +1,5 @@
 ---
-status: 설명만 들음
+status: 직접 다뤄봄
 first-seen: 2026-08-04
 ---
 
@@ -25,6 +25,9 @@ TypeScript `interface`는 컴파일 후 사라지므로, 런타임 DI 컨테이�
 ## 등장 이력
 
 - 2026-08-04 · Redis 캐싱 포트 설계 · 설명만, 코드 미적용
+- 2026-08-05 · Product 생성 핸들러 · `@Inject(PRODUCT_REPOSITORY)`를 직접 작성. 짝으로 배운 것:
+  `import { type ProductRepository }`의 `type`은 import **문**이 아니라 그 **바인딩 하나**만 지운다
+  (같은 줄의 Symbol은 런타임 값이라 남는다). `isolatedModules: true`라 파일별 독립 변환이므로 필요
 
 ## 인출 기록
 

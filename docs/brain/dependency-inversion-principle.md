@@ -1,5 +1,5 @@
 ---
-status: 설명만 들음
+status: 직접 다뤄봄
 first-seen: 2026-08-04
 ---
 
@@ -31,6 +31,9 @@ first-seen: 2026-08-04
 ## 등장 이력
 
 - 2026-08-04 · CQRS 구조에 Redis 캐싱 배치 설계 · 설명만, 코드 미적용
+- 2026-08-05 · Product 생성 파이프라인 · **처음으로 코드에 적용**. `PRODUCT_REPOSITORY` 포트(application)
+  ← `DrizzleProductRepository`(infrastructure), 배선은 `product.module.ts`의 `{ provide, useClass }`.
+  `create-product.handler.ts`의 import 목록에 infrastructure가 안 나오는 것으로 화살표 방향 확인 가능
 
 ## 인출 기록
 

@@ -1,5 +1,5 @@
 ---
-status: 설명만 들음
+status: 직접 다뤄봄
 first-seen: 2026-08-04
 ---
 
@@ -26,6 +26,8 @@ first-seen: 2026-08-04
   배치(`src/shared/domain/`)는 맞았고 용어만 뒤집혀 있었음
 - 2026-08-04 · Redis 캐싱 배치 설계 · 이 규칙을 실제로 적용해야 하는 첫 상황. 해법은
   [[dependency-inversion-principle]]
+- 2026-08-05 · Product 생성 파이프라인 · `presentation/`·`application/use-cases/` 계층을 직접 신설.
+  새 파일 7개가 전부 바깥 세 계층이고 `domain/`은 두 줄만 바뀐 것이 "바깥이 늘어도 안쪽은 조용하다"의 실물 증거
 
 ## 인출 기록
 
