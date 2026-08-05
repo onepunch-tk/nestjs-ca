@@ -1,10 +1,11 @@
+import * as schema from '@app/shared/infrastructure/database/postgres/schema';
 import { ConfigService } from '@nestjs/config';
 import { drizzle, NodePgDatabase } from 'drizzle-orm/node-postgres';
 import { Pool } from 'pg';
 
 export const DRIZZLE = Symbol('DRIZZLE');
 
-export type DrizzleDB = NodePgDatabase<{}>;
+export type DrizzleDB = NodePgDatabase<typeof schema>;
 
 export const DrizzleProvider = {
   provide: DRIZZLE,
@@ -16,7 +17,7 @@ export const DrizzleProvider = {
       ),
     });
 
-    const db = drizzle(pool, {});
+    const db = drizzle(pool, { schema });
     await db.execute(`SELECT 1`);
 
     return db;
