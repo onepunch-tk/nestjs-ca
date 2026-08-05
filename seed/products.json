@@ -1,0 +1,261 @@
+[
+  {
+    "name": "Compact 65% Keyboard",
+    "description": "68-key hot-swappable board with PBT keycaps",
+    "sku": "KB-65-068",
+    "price": 89.99,
+    "stock": 35
+  },
+  {
+    "name": "Full-size Keyboard",
+    "description": "104-key membrane keyboard with numpad",
+    "sku": "KB-FULL-104",
+    "price": 74.5,
+    "stock": 12
+  },
+  {
+    "name": "Split Ergonomic Keyboard",
+    "description": "Two-piece tenting keyboard with thumb clusters",
+    "sku": "KB-SPLIT-ERG",
+    "price": 219.0,
+    "stock": 6
+  },
+  {
+    "name": "Ergonomic Vertical Mouse",
+    "description": "57-degree vertical grip, 4000 DPI sensor",
+    "sku": "MS-ERGO-01",
+    "price": 49.99,
+    "stock": 60
+  },
+  {
+    "name": "Lightweight Gaming Mouse",
+    "description": "58g honeycomb shell, 26000 DPI optical sensor",
+    "sku": "MS-LITE-02",
+    "price": 39.99,
+    "stock": 0
+  },
+  {
+    "name": "Trackball Mouse",
+    "description": "Thumb-operated trackball, no desk space needed",
+    "sku": "MS-TRACK-03",
+    "price": 59.0,
+    "stock": 8
+  },
+  {
+    "name": "24-inch FHD Monitor",
+    "description": "1920x1080 IPS panel at 75Hz",
+    "sku": "MON-24-FHD",
+    "price": 149.99,
+    "stock": 44
+  },
+  {
+    "name": "27-inch 4K Monitor",
+    "description": "3840x2160 IPS panel with USB-C 90W delivery",
+    "sku": "MON-27-4K",
+    "price": 449.0,
+    "stock": 15
+  },
+  {
+    "name": "32-inch QHD Monitor",
+    "description": "2560x1440 VA panel at 165Hz",
+    "sku": "MON-32-QHD",
+    "price": 329.99,
+    "stock": 9
+  },
+  {
+    "name": "49-inch Ultrawide Monitor",
+    "description": "5120x1440 super ultrawide, dual QHD in one screen",
+    "sku": "MON-49-UW",
+    "price": 999.99,
+    "stock": 3
+  },
+  {
+    "name": "Over-ear Studio Headphones",
+    "description": "Closed-back monitoring headphones, 250 ohm",
+    "sku": "AUD-HP-900",
+    "price": 299.99,
+    "stock": 22
+  },
+  {
+    "name": "Wireless Earbuds",
+    "description": "Active noise cancelling with 30h case battery",
+    "sku": "AUD-EB-200",
+    "price": 129.0,
+    "stock": 75
+  },
+  {
+    "name": "USB Condenser Microphone",
+    "description": "Cardioid USB-C mic with headphone monitoring",
+    "sku": "AUD-MIC-USB",
+    "price": 99.99,
+    "stock": 18
+  },
+  {
+    "name": "Portable DAC Amplifier",
+    "description": "USB-C dongle DAC, 32-bit 384kHz",
+    "sku": "AUD-DAC-01",
+    "price": 199.5,
+    "stock": 6
+  },
+  {
+    "name": "Bluetooth Bookshelf Speakers",
+    "description": "Powered 4-inch two-way pair with optical input",
+    "sku": "AUD-SPK-BT",
+    "price": 249.0,
+    "stock": 11
+  },
+  {
+    "name": "13-inch Ultrabook",
+    "description": "16GB RAM, 512GB SSD, 1.1kg magnesium chassis",
+    "sku": "LAP-13-AIR",
+    "price": 1099.0,
+    "stock": 11
+  },
+  {
+    "name": "14-inch Pro Laptop",
+    "description": "32GB RAM, 1TB SSD, 120Hz mini-LED display",
+    "sku": "LAP-14-PRO",
+    "price": 1899.0,
+    "stock": 5
+  },
+  {
+    "name": "16-inch Workstation Laptop",
+    "description": "64GB RAM, 2TB SSD, discrete workstation GPU",
+    "sku": "LAP-16-MAX",
+    "price": 2499.0,
+    "stock": 2
+  },
+  {
+    "name": "1TB NVMe SSD",
+    "description": "PCIe 4.0 M.2 drive, 7000MB/s sequential read",
+    "sku": "STO-SSD-1TB",
+    "price": 119.99,
+    "stock": 50
+  },
+  {
+    "name": "2TB NVMe SSD",
+    "description": "PCIe 4.0 M.2 drive with heatsink",
+    "sku": "STO-SSD-2TB",
+    "price": 219.99,
+    "stock": 27
+  },
+  {
+    "name": "8TB External HDD",
+    "description": "3.5-inch desktop backup drive, USB 3.2",
+    "sku": "STO-HDD-8TB",
+    "price": 179.0,
+    "stock": 14
+  },
+  {
+    "name": "256GB USB-C Flash Drive",
+    "description": "Dual-connector drive, 400MB/s read",
+    "sku": "STO-USB-256",
+    "price": 34.99,
+    "stock": 120
+  },
+  {
+    "name": "4K Webcam",
+    "description": "Autofocus webcam with dual noise-cancelling mics",
+    "sku": "CAM-WEB-4K",
+    "price": 179.99,
+    "stock": 16
+  },
+  {
+    "name": "24MP Mirrorless Camera",
+    "description": "APS-C body with 18-55mm kit lens",
+    "sku": "CAM-MIRR-24",
+    "price": 1299.0,
+    "stock": 4
+  },
+  {
+    "name": "Aluminum Travel Tripod",
+    "description": "Folds to 40cm, 8kg load capacity",
+    "sku": "CAM-TRIP-AL",
+    "price": 89.0,
+    "stock": 30
+  },
+  {
+    "name": "XL Desk Mat",
+    "description": "900x400mm stitched-edge felt mat",
+    "sku": "DSK-MAT-XL",
+    "price": 29.99,
+    "stock": 90
+  },
+  {
+    "name": "Monitor Light Bar",
+    "description": "Asymmetric screen light with wireless dial",
+    "sku": "DSK-LAMP-01",
+    "price": 69.99,
+    "stock": 55
+  },
+  {
+    "name": "Dual Monitor Arm",
+    "description": "Gas-spring clamp arm for two 32-inch displays",
+    "sku": "DSK-ARM-DUAL",
+    "price": 139.99,
+    "stock": 21
+  },
+  {
+    "name": "Aluminum Laptop Stand",
+    "description": "Adjustable height stand for 11 to 17-inch laptops",
+    "sku": "DSK-STAND-LP",
+    "price": 44.99,
+    "stock": 65
+  },
+  {
+    "name": "8-in-1 USB-C Hub",
+    "description": "HDMI, Ethernet, SD, and 100W passthrough",
+    "sku": "ACC-HUB-USBC",
+    "price": 79.99,
+    "stock": 48
+  },
+  {
+    "name": "HDMI 2.1 Cable 2m",
+    "description": "48Gbps certified cable for 4K 120Hz",
+    "sku": "ACC-CBL-HDMI",
+    "price": 24.99,
+    "stock": 200
+  },
+  {
+    "name": "Qi2 Charging Pad",
+    "description": "15W magnetic wireless charger",
+    "sku": "ACC-PAD-QI",
+    "price": 19.99,
+    "stock": 80
+  },
+  {
+    "name": "Screen Cleaning Kit",
+    "description": "Alcohol-free spray with two microfiber cloths",
+    "sku": "ACC-CLN-KIT",
+    "price": 9.99,
+    "stock": 150
+  },
+  {
+    "name": "Wi-Fi 6 Mesh Router",
+    "description": "Tri-band AX5400 mesh node, 2.5G WAN port",
+    "sku": "NET-RTR-AX",
+    "price": 189.0,
+    "stock": 13
+  },
+  {
+    "name": "8-Port Gigabit Switch",
+    "description": "Unmanaged metal-case desktop switch",
+    "sku": "NET-SW-8P",
+    "price": 54.99,
+    "stock": 25
+  },
+  {
+    "name": "1500VA Line-interactive UPS",
+    "description": "900W output with pure sine wave and LCD panel",
+    "sku": "PWR-UPS-1500",
+    "price": 349.0,
+    "stock": 7
+  },
+  {
+    "name": "20000mAh USB-C Power Bank",
+    "description": "140W bidirectional charging with digital display",
+    "sku": "PWR-BAT-20K",
+    "price": 64.99,
+    "stock": 38
+  }
+]
