@@ -14,7 +14,7 @@ import { CreateProductCommand } from './create-product.command';
 
 @CommandHandler(CreateProductCommand)
 export class CreateProductHandler
-  implements ICommandHandler<CreateProductCommand>
+  implements ICommandHandler<CreateProductCommand, void>
 {
   constructor(
     @Inject(PRODUCT_REPOSITORY)
