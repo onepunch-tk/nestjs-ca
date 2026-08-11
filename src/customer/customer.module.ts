@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { CUSTOMER_REPOSITORY } from './application/ports/customer.repository.port';
+import { QueryHandlers } from './application/queries/handlers';
 import { CommandHandlers } from './application/use-cases';
 import { DrizzleCustomerRepository } from './infrastructure/adapters/drizzle-customer.repository';
 import { MongoCustomerRepository } from './infrastructure/adapters/mongo-customer.repository';
@@ -9,6 +10,7 @@ import { CustomerController } from './presentation/customer.controller';
 @Module({
   providers: [
     ...CommandHandlers,
+    ...QueryHandlers,
     DrizzleCustomerRepository,
     MongoCustomerRepository,
     {
