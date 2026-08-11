@@ -8,6 +8,13 @@
       "when": 1785898376085,
       "tag": "0000_equal_network",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1786428458629,
+      "tag": "0001_curved_george_stacy",
+      "breakpoints": true
     }
   ]
 }
