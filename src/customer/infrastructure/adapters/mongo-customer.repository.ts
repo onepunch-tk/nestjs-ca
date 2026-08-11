@@ -12,7 +12,7 @@ interface CustomerDocument {
   firstName: string;
   lastName: string;
   phone: string | null;
-  isActivce: boolean;
+  isActive: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -64,7 +64,7 @@ export class MongoCustomerRepository implements CustomerRepository {
       firstName: customer.firstName,
       lastName: customer.lastName,
       phone: customer.phone,
-      isActivce: customer.isActive,
+      isActive: customer.isActive,
       createdAt: customer.createdAt,
       updatedAt: customer.updatedAt,
     };
@@ -76,7 +76,7 @@ export class MongoCustomerRepository implements CustomerRepository {
       email: Email.create(doc.email),
       firstName: doc.firstName,
       lastName: doc.lastName,
-      isActive: doc.isActivce,
+      isActive: doc.isActive,
       phone: doc.phone,
       createdAt: doc.createdAt,
       updatedAt: doc.updatedAt,

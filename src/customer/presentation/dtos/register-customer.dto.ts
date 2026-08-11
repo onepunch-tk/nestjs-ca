@@ -14,12 +14,12 @@ export class RegisterCustomerDto {
 
   @IsString()
   @IsNotEmpty()
-  @MaxLength(200)
+  @MaxLength(100)
   firstName: string;
 
   @IsString()
   @IsNotEmpty()
-  @MaxLength(200)
+  @MaxLength(100)
   lastName: string;
 
   @IsPhoneNumber()
