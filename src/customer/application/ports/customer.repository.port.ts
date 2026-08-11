@@ -1,5 +1,5 @@
-import { Customer } from '@app/customer/domain/entites/customer.entity';
-import { CustomerId } from '@app/customer/domain/value-objects/cumster-id.vo';
+import { Customer } from '@app/customer/domain/entities/customer.entity';
+import { CustomerId } from '@app/customer/domain/value-objects/customer-id.vo';
 import { Email } from '@app/customer/domain/value-objects/email.vo';
 
 export const CUSTOMER_REPOSITORY = Symbol('CUSTOMER_REPOSITORY');

@@ -6,8 +6,8 @@ import { customers } from '@app/shared/infrastructure/database/postgres/schema';
 import { Inject, Injectable } from '@nestjs/common';
 import { eq } from 'drizzle-orm';
 import { CustomerRepositoryPort } from '../../application/ports/customer.repository.port';
-import { Customer } from '../../domain/entites/customer.entity';
-import { CustomerId } from '../../domain/value-objects/cumster-id.vo';
+import { Customer } from '../../domain/entities/customer.entity';
+import { CustomerId } from '../../domain/value-objects/customer-id.vo';
 import { Email } from '../../domain/value-objects/email.vo';
 
 @Injectable()

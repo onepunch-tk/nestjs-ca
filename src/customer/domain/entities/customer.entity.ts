@@ -1,5 +1,5 @@
 import { AggregateRoot } from '@app/shared/domain/aggregate-root';
-import { CustomerId } from '../value-objects/cumster-id.vo';
+import { CustomerId } from '../value-objects/customer-id.vo';
 import { Email } from '../value-objects/email.vo';
 
 type CustomerProps = {

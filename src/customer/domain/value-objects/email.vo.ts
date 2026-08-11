@@ -14,7 +14,7 @@ export class Email {
     const trimmed = value.trim().toLowerCase();
 
     if (!trimmed) {
-      throw new DomainException('Email connot be empty');
+      throw new DomainException('Email cannot be empty');
     }
 
     if (!Email.EMAIL_PATTERN.test(trimmed)) {
@@ -28,8 +28,8 @@ export class Email {
     return this.value;
   }
 
-  equals(ohter: Email) {
-    return this.value === ohter.value;
+  equals(other: Email) {
+    return this.value === other.value;
   }
 
   toString(): string {
