@@ -5,13 +5,13 @@ import {
 import { customers } from '@app/shared/infrastructure/database/postgres/schema';
 import { Inject, Injectable } from '@nestjs/common';
 import { eq } from 'drizzle-orm';
-import { CustomerRepositoryPort } from '../../application/ports/customer.repository.port';
+import { CustomerRepository } from '../../application/ports/customer.repository.port';
 import { Customer } from '../../domain/entities/customer.entity';
 import { CustomerId } from '../../domain/value-objects/customer-id.vo';
 import { Email } from '../../domain/value-objects/email.vo';
 
 @Injectable()
-export class DrizzleCustomerRepository implements CustomerRepositoryPort {
+export class DrizzleCustomerRepository implements CustomerRepository {
   constructor(@Inject(DRIZZLE) private readonly db: DrizzleDB) {}
 
   async save(customer: Customer): Promise<void> {

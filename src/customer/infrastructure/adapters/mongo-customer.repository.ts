@@ -1,4 +1,4 @@
-import { CustomerRepositoryPort } from '@app/customer/application/ports/customer.repository.port';
+import { CustomerRepository } from '@app/customer/application/ports/customer.repository.port';
 import { Customer } from '@app/customer/domain/entities/customer.entity';
 import { CustomerId } from '@app/customer/domain/value-objects/customer-id.vo';
 import { Email } from '@app/customer/domain/value-objects/email.vo';
@@ -18,7 +18,7 @@ interface CustomerDocument {
 }
 
 @Injectable()
-export class MongoCustomerRepository implements CustomerRepositoryPort {
+export class MongoCustomerRepository implements CustomerRepository {
   private readonly collection: Collection<CustomerDocument>;
 
   constructor(@Inject(MONGO_DB) private readonly db: Db) {

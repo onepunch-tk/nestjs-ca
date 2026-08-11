@@ -1,11 +1,14 @@
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { CUSTOMER_REPOSITORY } from './application/ports/customer.repository.port';
+import { CommandHandlers } from './application/use-cases';
 import { DrizzleCustomerRepository } from './infrastructure/adapters/drizzle-customer.repository';
 import { MongoCustomerRepository } from './infrastructure/adapters/mongo-customer.repository';
+import { CustomerController } from './presentation/customer.controller';
 
 @Module({
   providers: [
+    ...CommandHandlers,
     DrizzleCustomerRepository,
     MongoCustomerRepository,
     {
@@ -26,6 +29,6 @@ import { MongoCustomerRepository } from './infrastructure/adapters/mongo-custome
       ],
     },
   ],
-  controllers: [],
+  controllers: [CustomerController],
 })
 export class CustomerModule {}

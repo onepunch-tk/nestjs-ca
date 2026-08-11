@@ -69,7 +69,7 @@ export class Customer extends AggregateRoot {
     email: Email,
     firstName: string,
     lastName: string,
-    phone: string,
+    phone: string | null,
   ): Customer {
     const id = new CustomerId();
     const now = new Date();

@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { CqrsModule } from '@nestjs/cqrs';
-import { CommandHandlers } from './application';
 import { PRODUCT_REPOSITORY } from './application/ports/product.repository.port';
 import { QueryHandlers } from './application/queries/handlers';
+import { CommandHandlers } from './application/use-cases';
 import { DrizzleProductRepository } from './infrastructure/adapters/drizzle-product.repository';
 import { MongoProductRepository } from './infrastructure/adapters/mongo-product.repository';
 import { ProductController } from './presentation/product.controller';
