@@ -5,7 +5,7 @@ import {
   ApplicationExceptionCode,
 } from '@app/shared/domain/exceptions/application.exception';
 import { Inject } from '@nestjs/common';
-import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
+import { CommandHandler, EventPublisher, ICommandHandler } from '@nestjs/cqrs';
 import {
   CUSTOMER_REPOSITORY,
   type CustomerRepository,
@@ -19,6 +19,7 @@ export class RegisterCustomerHandler
   constructor(
     @Inject(CUSTOMER_REPOSITORY)
     private readonly customerRepository: CustomerRepository,
+    private readonly eventPublisher: EventPublisher,
   ) {}
 
   async execute(command: RegisterCustomerCommand): Promise<void> {
@@ -33,13 +34,17 @@ export class RegisterCustomerHandler
       );
     }
 
-    const customer = Customer.register(
-      email,
-      command.firstName,
-      command.lastName,
-      command.phone,
+    const customer = this.eventPublisher.mergeObjectContext(
+      Customer.register(
+        email,
+        command.firstName,
+        command.lastName,
+        command.phone,
+      ),
     );
 
     await this.customerRepository.save(customer);
+
+    customer.commit();
   }
 }

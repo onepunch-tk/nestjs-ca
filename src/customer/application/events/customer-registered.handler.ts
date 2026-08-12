@@ -1,0 +1,25 @@
+import { CustomerRegisteredEvent } from '@app/customer/domain/events/customer-registered.event';
+import { Inject } from '@nestjs/common';
+import { EventsHandler, IEventHandler } from '@nestjs/cqrs';
+import {
+  NOTIFICATION_SERVICE,
+  type NotificationPort,
+} from '../ports/notification.port';
+
+@EventsHandler(CustomerRegisteredEvent)
+export class CustomerRegisteredHandler
+  implements IEventHandler<CustomerRegisteredEvent>
+{
+  constructor(
+    @Inject(NOTIFICATION_SERVICE)
+    private readonly notificationService: NotificationPort,
+  ) {}
+
+  async handle(event: CustomerRegisteredEvent) {
+    await this.notificationService.sendNotification({
+      recipientId: event.customerId,
+      subject: 'Welecome',
+      message: `Welcome to Nestjs CA, ${event.firstName}! Your account has been created`,
+    });
+  }
+}

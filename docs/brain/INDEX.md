@@ -12,3 +12,5 @@
 - [cqrs-command-bus](cqrs-command-bus.md) · 직접 다뤄봄 · 2026-08-05 Product 생성 파이프라인
 - [dto-command-entity-separation](dto-command-entity-separation.md) · 직접 다뤄봄 · 2026-08-05 GET /products 쿼리 DTO
 - [query-string-type-coercion](query-string-type-coercion.md) · 직접 다뤄봄 · 2026-08-05 GET /products 쿼리 DTO
+- [domain-event](domain-event.md) · 직접 다뤄봄 · 2026-08-12 customer 가입 알림 이벤트
+- [apply-merge-commit-lifecycle](apply-merge-commit-lifecycle.md) · 직접 다뤄봄 · 2026-08-12 customer 가입 알림 이벤트
