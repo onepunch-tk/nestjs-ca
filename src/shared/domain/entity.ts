@@ -4,10 +4,10 @@ import { UniqueId } from './value-objects/unique-id.vo';
  * shered entity
  */
 export abstract class Entity<T extends UniqueId = UniqueId> {
-  constructor(protected readonly id: T) {}
+  constructor(protected readonly _id: T) {}
 
-  getId(): T {
-    return this.id;
+  get id(): T {
+    return this._id;
   }
 
   equals(other: Entity<T>): boolean {
