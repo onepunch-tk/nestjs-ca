@@ -24,6 +24,7 @@ TypeScript는 타입 이름이 아니라 구조(모양)가 같으면 호환으�
 ## 등장 이력
 
 - 2026-08-04 · shared `UniqueId` 리뷰 · `private` 선택이 왜 옳았는지 설명받음
+- 2026-08-13 · typestate 실험 · phantom 필드가 필요한 이유의 힌트로 재등장 (no-phantom 예측 실험 대기)
 
 ## 인출 기록
 

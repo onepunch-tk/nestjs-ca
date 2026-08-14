@@ -28,6 +28,8 @@ VO는 생성자에서 검증해서, 유효하지 않은 인스턴스가 애초�
 - 2026-08-05 · `Sku.SKU_PATTERN`에 하이픈 허용을 직접 추가 + `Product.create`가 원시값을 받아
   내부에서 `Money.create`/`Sku.create`를 호출하도록 변경 · VO 생성 지점을 팩토리 한 곳으로 모은 셈.
   대가는 `(price: number, currency: string)`이 나란히 서서 순서 실수를 컴파일러가 못 잡는 것
+- 2026-08-13 · OrderStatus VO 강의 분석 · `fromString`이 생성 검문소, `transitionTo`가 전이 검문소로
+  같은 원리가 상태 전이까지 확장되는 것을 확인
 
 ## 인출 기록
 
